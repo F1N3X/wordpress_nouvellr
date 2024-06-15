@@ -1,0 +1,340 @@
+.main_produit {
+    height: auto;
+
+}
+
+
+
+.card_produit {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    background-image: url(http://bap.test/wp-content/uploads/2023/12/article_bg.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+    @include breakpoint(1000px, 'max') {
+        height: 150%;
+        background-size: 200%;
+    }
+
+    @include breakpoint(600px, 'max') {
+        height: 200%;
+        background-size: 300%;
+    }
+
+
+
+    &_content {
+        margin-top: 5%;
+        margin-left: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        height: auto;
+        border-radius: 40px;
+        background-color: rgba(255, 255, 255, 0.5);
+
+
+        @include breakpoint(1000px, 'max') {
+            flex-direction: column;
+            height: 100%;
+            /* margin-left: 0%;
+            margin-top: 0%; */
+        }
+
+        &_img {
+            text-align: center;
+            width: 100%;
+
+            img {
+                width: 70%;
+                object-fit: cover;
+
+                @include breakpoint(1000px, 'max') {
+                    width: 50%;
+                }
+            }
+            
+        }
+
+        
+
+
+        &_texte {
+            width: 100%;
+
+            @include breakpoint(1000px, 'max') {
+                margin-left: 25%;
+            }
+
+            @include breakpoint(800px, 'max') {
+                margin-left: 15%;
+            }
+
+            @include breakpoint(500px, 'max') {
+                margin-left: 10%;
+            }
+
+            p {
+                color: black;
+            }
+
+            h3 {
+                font-family: $outfit;
+                font-weight: 500;
+                font-size: 30px;
+                text-decoration: underline;
+
+                @include breakpoint(1000px, 'max') {
+                    font-size: 25px;
+                    color: black;
+                    text-decoration: none;
+                }
+
+                @include breakpoint(800px, 'max') {
+                    font-size: 20px;
+                }
+            }
+
+            h4 {
+                font-family: $outfit;
+                font-weight: 100;
+                font-size: 25px;
+               
+                color: #848484;
+                margin-top: 2%;
+
+                @include breakpoint(1000px, 'max') {
+                    font-size: 23px;
+                    color: black;
+                    font-weight: 400;
+                }
+
+                @include breakpoint(800px, 'max') {
+                    font-size: 20px;
+                }
+
+                @include breakpoint(500px, 'max') {
+                    font-size: 18px;
+                }
+
+                @include breakpoint(450px, 'max') {
+                    font-size: 15px;
+                }
+            }
+
+            hr {
+                width: 80%;
+                margin-left: 12%;
+                margin-bottom: 2%;
+                border: 1px solid #D9D9D9;
+
+                @include breakpoint(1000px, 'max') {
+                    margin-left: 0%;
+                    border: 1px solid black;
+                }
+            }
+
+            .text_produit {
+                display: flex;
+                justify-content: center;
+
+                p{
+                    font-family: $outfit;
+                    font-weight: 600;
+                    color: $gray2;
+                }
+            }
+
+            .text_resume {
+                margin-left: 12%;
+
+                p{
+                    font-family: $outfit;
+                    font-weight: 400;
+                    font-size: 20px;
+                    color: $gray2;
+                }
+            }
+
+            &_liste {
+                display: flex;
+
+                li {
+                    $font-family: $outfit;
+                    color: $gray2;
+                    margin-bottom: 1rem;
+                }
+
+                ul {
+                    margin-left: 12%;
+
+                    @include breakpoint(800px, 'max') {
+                        margin-left: 6%;
+                    }
+
+                    @include breakpoint(500px, 'max') {
+                        margin-left: 0%;
+                    }
+                }
+
+                ul:nth-of-type(1) {
+                    
+                    li {
+                        @include breakpoint(1000px, 'max') {
+                         color: black;
+                         font-weight: bold;
+                        }
+                    }
+                 
+                }
+
+                ul:nth-of-type(2) {
+                    margin-left: 18%;
+                }
+            }
+        }
+
+        &_texte:before{
+            padding-top: 0px;
+        }
+
+        
+        .produit_link {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            margin-top: 5%;
+            width: 70%;
+            margin-left: 6rem;
+            text-align: center;
+
+            @include breakpoint(1000px, 'max') {
+                margin-left: 1rem;
+            }
+        
+        }
+
+        .produit_link a:nth-of-type(1) {
+            justify-content: center;
+            font-family: $outfit;
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: white;
+            padding: 10px 50px 10px 50px;
+            background-color: $green2;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+        }
+
+        .produit_link a:nth-of-type(1):hover {
+            background-color: $green;
+        }
+
+        
+    }
+}
+
+.card_question {
+    width: 80%;
+    border-radius: 40px;
+    margin-left:  10%;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.5);
+    margin-top: 5%;
+    margin-bottom: 2rem;
+
+    @include breakpoint(1000px, 'max') {
+        height: auto;
+    }
+
+    &_title1 {
+        margin-top: 2rem;
+        color: #000;
+        text-align: center;
+        font-family: $palitoon;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 400;
+
+        @include breakpoint(800px, 'max') {
+            font-size: 30px;
+        }
+
+        @include breakpoint(500px, 'max') {
+            font-size: 20px;
+        }
+
+
+    }
+
+    &_title2 {
+    color: #000;
+    margin-left: 6%;
+
+    /* Outfit Regular 30 */
+    font-family: $outfit;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+
+    @include breakpoint(800px, 'max') {
+        font-size: 20px;
+    
+    }
+
+    @include breakpoint(500px, 'max') {
+        font-size: 15px;
+    
+    }
+
+}
+
+    &_form {
+
+        input {
+            margin-left: 9%;
+            font-family: $outfit;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            width: 80%;
+            border: 0px;
+            color: black;
+            background-color: transparent;
+            border-bottom: 2px solid black;
+        }
+    }
+
+    &_reponse {
+        margin-left: 9%;
+        margin-top: 2rem;
+        width: 80%;
+        border-radius: 22px;
+        background: rgba(26, 67, 1, 0.12);  
+        
+        p {
+            margin-left: 1rem;
+            color: black;
+
+        /* Outfit Regular 30 */
+        font-family: $outfit;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        }
+
+        p:nth-child(2) {
+            color: #828282;
+            font-family: Outfit;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 200;
+        }
+    }
+
+}
